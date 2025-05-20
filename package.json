@@ -4,8 +4,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "next dev",
-    "build":"next build",
-    "start":"next start"
+    "build": "next build",
+    "start": "next start"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +19,6 @@
   "devDependencies": {
     "@types/node": "22.15.19",
     "@types/react": "19.1.4",
-    "typescript": "5.8.3"
+    "typescript": "^5.8.3"
   }
 }
