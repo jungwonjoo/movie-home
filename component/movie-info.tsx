@@ -1,4 +1,5 @@
-import { URL} from '../app/(home)/page'
+
+import { URL } from '../app/contants'
 import styles from '../styles/movie-info.module.css'
 
 export async function getMovie(id:string) {

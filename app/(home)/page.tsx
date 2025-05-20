@@ -1,14 +1,15 @@
 import MovieItem from '../../component/movieItem'
 import homeStyles from '../../styles/home.module.css'
+import { URL } from '../contants'
 
 export const metadata = {
     title: "HOME"
 }
 
-export const URL = 'https://nomad-movies.nomadcoders.workers.dev/movies'
+
 
 async function getMovies() {
-    const res = await fetch(`${URL}`)
+    const res = await fetch(URL)
     return res.json()
 }
 
