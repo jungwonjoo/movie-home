@@ -2,8 +2,8 @@ import { URL} from '../app/(home)/page'
 
 async function getVideo(id:string) {
 
-    console.log(`Fetching videos : ${Date.now()}`)
-    await new Promise((resolve)=>setTimeout(resolve, 1000))
+    // console.log(`Fetching videos : ${Date.now()}`)
+    // await new Promise((resolve)=>setTimeout(resolve, 3000))
 
     // throw new Error('에러에러에러에러에러!!!!')
 
@@ -17,6 +17,7 @@ export default async function MovieVideo({id}:{id:string}) {
 
     return(
         <div>
+            <div>{JSON.stringify(videoItem)}</div>
             {/* {videoItem.map((video) => (
                 <iframe 
                     key={video.id} 
