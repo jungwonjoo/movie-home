@@ -34,15 +34,17 @@ async function getMovies() {
 // Next.js 15+에서는 page.tsx 컴포넌트가 기본적으로 { params, searchParams }를 받는다고 간주함
 // 쓰지 않더라도 타입에 명시해 줘야 함
 
-export default async function Page(props: {
-  params: {};
-  searchParams?: {};
-}) {
+type PageProps = {
+  params: {}; // 현재 사용 안 하므로 빈 객체로 설정
+  searchParams?: {}; // optional
+};
+
+export default async function Page({ params }: PageProps) {
   const movies = await getMovies();
 
   return (
     <div className={homeStyles.container}>
-      {movies.map((movie) => (
+      {movies.map((movie:any) => (
         <MovieItem
           key={movie.id}
           id={movie.id}

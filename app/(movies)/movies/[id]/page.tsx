@@ -15,20 +15,19 @@ import MovieVideo from '../../../../component/movie-videos'
 //     }
 // }
 
-type IParams = Promise <{id: string}>;
+type IParams = {
+  params: { id: string };
+};
 
-export async function generateMetadata(props: { params: IParams }) {
-    const params = await props.params;
-    const id = params.id;
-    const movie = await getMovie(id);
+export async function generateMetadata({ params}: IParams ) {
+    const movie = await getMovie(params.id);
     return {
         title: movie.title,
     };
 }
 
-export default async function Page(props: { params: IParams }){
+export default async function Page({ params}: IParams ){
 
-    const params = await props.params;
     const id = params.id;
 
     return(
